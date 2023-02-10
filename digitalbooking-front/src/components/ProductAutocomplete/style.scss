@@ -1,0 +1,25 @@
+@import '../../App.scss';
+
+#suggestionsBox{
+    position:absolute;
+}
+
+.suggestion{
+    cursor: pointer;
+    border-right: 1px solid $cinza-claro;
+    border-left: 1px solid $cinza-claro;
+    border-bottom: 1px solid $cinza-claro;
+    width: 422px;
+    height: 41px;   
+    padding-left: 40px;
+    font-size: 14px;  
+    color: $cinza-escuro;
+    display: flex;
+    align-items: center;
+    background-color: $branco; 
+    
+}
+
+.suggestion:hover{
+    background-color: $laranja;
+}

@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+
+#not-logged {
+    display: flex;
+
+
+.header-sandwich{
+    background-color: $laranja ;
+    height: 175px; 
+    width: 100%;
+    margin-top: -12px;
+
+
+    #offcanvasNavbar{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 145px !important;
+        margin-right: 14px;
+        color: $branco;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 12px;
+    }
+
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.offcanvas-body :last-child{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.offcanvas-body :first-child{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+hr{
+    background-color: $cinza-escuro;
+    opacity: 1 !important;
+
+}
+}
+
+.nav-link {
+    color: $cinza-escuro !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+.btn-close{
+    color: $branco;
+}
+
+.menu {
+    display: flex;
+    color: $branco;
+    margin-top: 136px;
+    margin-right: 12px;
+    justify-content: flex-end;
+    h5{
+        align-self: end;
+    }
+}

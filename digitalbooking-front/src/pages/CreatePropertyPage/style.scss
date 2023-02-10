@@ -1,0 +1,130 @@
+@import '../../App.scss';
+
+#createProduct{
+    background-color: #DFE4EA !important;
+
+    .productPage.container{
+        background-color: #DFE4EA !important;
+        padding-bottom:4%;
+
+        .formProduct{
+            border: 1px solid #DFE4EA;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            width: 100%;
+            background-color: white;
+            padding:3%;
+        }
+
+        .propertyRow{
+            padding: 3% 0% 1% 0%;
+        }
+
+        h3.firstTittle{
+            padding:3% 0 !important;
+        }
+
+        .propertyRow1{
+            padding: 3% 0% 1% 0%;
+        }
+
+        .nameAttribute,
+        .iconeAttribute{
+            padding:2% 2% 3%;
+        }
+
+        .imageProperty{
+            padding:3%;
+        }
+
+        h3.secondTittle{
+            padding-bottom: 3%!important;
+        }
+
+        .invalid-feedback{
+            position: relative;
+            width: 80%;
+            margin-bottom: 2%;
+        }
+
+        label.form-label {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: $preto;
+        }
+        
+        input#validationFormik14.form-control,
+        #validationFormik15.form-select,
+        #validationFormik16.form-control,
+        #validationFormik17.form-select,
+        #validationFormik18.form-control,
+        #validationFormik19.form-control,
+        #validationFormik20.form-control,
+        #validationFormik21.form-control,
+        #validationFormik22.form-control,
+        #validationFormik23.form-control,
+        #validationFormik24.form-control {
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+            border: none !important;
+            outline: 0;
+            margin-right: 0!important;
+        }
+        
+        input#validationFormik14.form-control.is-invalid,
+        #validationFormik15.form-control.is-invalid,
+        #validationFormik16.form-control.is-invalid,
+        #validationFormik17.form-control.is-invalid,
+        #validationFormik18.form-control.is-invalid,
+        #validationFormik19.form-control.is-invalid,
+        #validationFormik20.form-control.is-invalid,
+        #validationFormik21.form-control.is-invalid,
+        #validationFormik22.form-control.is-invalid,
+        #validationFormik23.form-control.is-invalid,
+        #validationFormik24.form-control.is-invalid {
+            margin-bottom: 0 !important;
+        }
+
+        select#validationFormik15.form-select,
+        select#validationFormik17.form-select{
+            margin: 0!important;
+            width:100%!important;
+        }
+
+        .d-flex.register{
+            align-items: center;
+            text-align:center;
+            display:flex;
+            justify-content:center;
+        }
+        
+        button.registerButton{
+            background-color: $laranja;
+            border:none;
+            font-size: clamp(1rem, 1.5vw, 1.1rem);
+            padding:1% 4%;
+        }
+        button.imgButtonPlus,
+        button.imgButtonMinus{
+            height:35px;
+            width:35px;
+            padding: 5px 0px ;
+        }
+        button.imgButtonPlus{
+            background-color: $laranja;
+            border-color:$laranja;
+        }
+        button.imgButtonMinus{
+            background-color: $cinza-escuro;
+            border-color: $cinza-escuro;
+        }
+
+        .form-check-input[type=checkbox]:checked:after{
+            border:0px;
+        }
+
+        .form-check-input[type=checkbox]:checked{
+            background-color:$laranja;
+            border-color:$laranja;
+        }
+
+    }
+}

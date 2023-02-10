@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "e7339429-39a1-435e-9487-fa2de88f165c",
+		"name": "CategoriasPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RequestMethods",
+			"item": [
+				{
+					"name": "SalvarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"categoryId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"categoryId\"));\r",
+									"    pm.expect(response.title).to.eql(\"Praia\");\r",
+									"    pm.expect(response.description).to.eql(\"destinos litoraneos\");\r",
+									"    pm.expect(response.urlImage).to.eql(\"www.img.com.br/praia\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Praia\",\r\n  \"description\": \"destinos litoraneos\",\r\n  \"urlImage\": \"www.img.com.br/praia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarCategoriaPorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/{{categoryId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"{{categoryId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodasCategorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if repsonse is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json()).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"categoryId\"));\r",
+									"    pm.expect(response.title).to.eql(\"Cidade\");\r",
+									"    pm.expect(response.description).to.eql(\"destinos urbanos\");\r",
+									"    pm.expect(response.urlImage).to.eql(\"www.img.com.br/cidade\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": {{categoryId}},\r\n  \"title\": \"Cidade\",\r\n  \"description\": \"destinos urbanos\",\r\n  \"urlImage\": \"www.img.com.br/cidade\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/{{categoryId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"{{categoryId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "categoryId",
+			"value": ""
+		}
+	]
+}

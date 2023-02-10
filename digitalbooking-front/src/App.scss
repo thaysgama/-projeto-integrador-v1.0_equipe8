@@ -1,0 +1,33 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import "~bootstrap/scss/bootstrap";
+
+$laranja: #F0572D;
+$laranja-claro: rgba(240, 87, 45, 0.5);
+$cinza-escuro: #31363F;
+$cinza-claro: #DFE4EA;
+$preto: #191B1D;
+$branco: #FFFFFF;
+
+
+$preto-transp: rgba(25, 27, 29, 0.5);
+
+
+
+*{
+  margin: 0;
+  box-sizing: border-box; 
+  padding: 0;
+  scroll-behavior: smooth;  
+}
+
+
+
+body, input, textarea, button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400,
+}
+
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,72 @@
+@import '../../App.scss';
+
+#register{
+    background-color:rgb(223, 228, 234, 0.8);
+    min-height:100vh;
+        
+  .formRegister.col-lg-4.col-md-10.col-10{
+    margin: 0% auto;
+   }
+
+    .h3Register{
+    padding:8%;
+    text-align: center;
+    font-weight:bold;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: $laranja;  
+    }
+
+    label.form-label{
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: $preto;
+    }
+
+    input
+    {
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        border:none;
+        outline:0;
+        box-sizing: border-box;
+    }
+
+    input#validationFormik01.form-control.is-invalid,
+    #validationFormik02.form-control.is-invalid,
+    #validationFormikUsername.form-control.is-invalid,
+    #validationFormikPassword.password.form-control{
+        margin-bottom:0;
+    }
+    .d-flex.register{
+        justify-content:center;
+        padding-top:6%;
+    }
+
+    button.mb-3.col-lg-4.col-md-4.col-12.btn.btn-primary.register{
+        background-color: $laranja;
+        border:none;
+        font-size: clamp(1rem, 1.5vw, 1.1rem);
+    }
+    
+    .pRegister{
+        text-align:center;
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    }
+
+    .pRegister a {
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        text-decoration: none;
+        color: $preto;
+        font-weight: bold;
+    }
+
+        .imageVisibility.register{
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            right: 1.8rem;
+            z-index: 2;
+            float: right;
+            bottom: 1.8rem;
+        }  
+        
+}
+

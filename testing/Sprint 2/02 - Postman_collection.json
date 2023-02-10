@@ -1,0 +1,1360 @@
+{
+	"info": {
+		"_postman_id": "e7339429-39a1-435e-9487-fa2de88f165c",
+		"name": "DigitalBookingPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RequestMethodsCategory",
+			"item": [
+				{
+					"name": "SalvarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"categoryId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"categoryId\"));\r",
+									"    pm.expect(response.title).to.eql(\"Praia\");\r",
+									"    pm.expect(response.description).to.eql(\"destinos litoraneos\");\r",
+									"    pm.expect(response.urlImage).to.eql(\"www.img.com.br/praia\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Praia\",\r\n  \"description\": \"destinos litoraneos\",\r\n  \"urlImage\": \"www.img.com.br/praia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalvarCategoria2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"categoryId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"categoryId\"));\r",
+									"    pm.expect(response.title).to.eql(\"Praia\");\r",
+									"    pm.expect(response.description).to.eql(\"destinos litoraneos\");\r",
+									"    pm.expect(response.urlImage).to.eql(\"www.img.com.br/praia\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Praia\",\r\n  \"description\": \"destinos litoraneos\",\r\n  \"urlImage\": \"www.img.com.br/praia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarCategoriaPorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/{{categoryId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"{{categoryId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodasCategorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if repsonse is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"categoryId\"));\r",
+									"    pm.expect(response.title).to.eql(\"Cidade\");\r",
+									"    pm.expect(response.description).to.eql(\"destinos urbanos\");\r",
+									"    pm.expect(response.urlImage).to.eql(\"www.img.com.br/cidade\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": {{categoryId}},\r\n  \"title\": \"Cidade\",\r\n  \"description\": \"destinos urbanos\",\r\n  \"urlImage\": \"www.img.com.br/cidade\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/category/{{categoryId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								"{{categoryId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequestMethodsCity",
+			"item": [
+				{
+					"name": "SalvarCidade",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"cityId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"cityId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Caucaia\");\r",
+									"    pm.expect(response.uf).to.eql(\"CE\");\r",
+									"    pm.expect(response.country).to.eql(\"Brasil\");\r",
+									"    pm.expect(response.latitude).to.eql(\"0000\");\r",
+									"    pm.expect(response.longitude).to.eql(\"0000\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Caucaia\",\r\n    \"uf\": \"CE\",\r\n    \"country\": \"Brasil\",\r\n    \"latitude\": \"0000\",\r\n    \"longitude\": \"0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalvarCidade2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"cityId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"cityId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Caucaia\");\r",
+									"    pm.expect(response.uf).to.eql(\"CE\");\r",
+									"    pm.expect(response.country).to.eql(\"Brasil\");\r",
+									"    pm.expect(response.latitude).to.eql(\"0000\");\r",
+									"    pm.expect(response.longitude).to.eql(\"0000\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Caucaia\",\r\n    \"uf\": \"CE\",\r\n    \"country\": \"Brasil\",\r\n    \"latitude\": \"0000\",\r\n    \"longitude\": \"0000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarCidadePorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city/{{cityId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city",
+								"{{cityId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodasCidades",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if repsonse is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarCidade",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"cityId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Natal\");\r",
+									"    pm.expect(response.uf).to.eql(\"RN\");\r",
+									"    pm.expect(response.country).to.eql(\"Brasil\");\r",
+									"    pm.expect(response.latitude).to.eql(\"1111\");\r",
+									"    pm.expect(response.longitude).to.eql(\"1111\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{cityId}},\r\n    \"name\": \"Natal\",\r\n    \"uf\": \"RN\",\r\n    \"country\": \"Brasil\",\r\n    \"latitude\": \"1111\",\r\n    \"longitude\": \"1111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarCidade",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/city/{{cityId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"city",
+								"{{cityId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequestMethodsCharacteristic",
+			"item": [
+				{
+					"name": "SalvarCaracteristica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"characteristicId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"characteristicId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Televisão\");\r",
+									"    pm.expect(response.icon).to.eql(\"tv\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Televisão\",\r\n    \"icon\": \"tv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SalvarCaracteristica2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"characteristicId\", response.id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"characteristicId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Televisão\");\r",
+									"    pm.expect(response.icon).to.eql(\"tv\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Televisão\",\r\n    \"icon\": \"tv\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarCaracteristicaPorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic/{{characteristicId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic",
+								"{{characteristicId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodasCaracteristicas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if repsonse is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarCaracteristica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"characteristicId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Aceita pets\");\r",
+									"    pm.expect(response.icon).to.eql(\"paw\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{characteristicId}},\r\n    \"name\": \"Aceita pets\",\r\n    \"icon\": \"paw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarCaracteristica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/characteristic/{{characteristicId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characteristic",
+								"{{characteristicId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RequestMethodsProduct",
+			"item": [
+				{
+					"name": "SalvarProduto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// set the category Id.\r",
+									"pm.collectionVariables.set(\"productId\", response.id);\r",
+									"pm.collectionVariables.set(\"imageId1\", response.images[0].id);\r",
+									"pm.collectionVariables.set(\"imageId2\", response.images[1].id);\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 201\", function() {\r",
+									"    pm.response.to.have.status(201);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Flat Consolação\");\r",
+									"    pm.expect(response.description).to.eql(\"Flat perto do centro\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Flat Consolação\",\r\n    \"description\": \"Flat perto do centro\",\r\n    \"characteristicIds\": [1,2],\r\n    \"imageList\": [{\r\n        \"title\": \"sala\",\r\n        \"url\": \"www.image.com/sala\"\r\n    },\r\n    {\r\n        \"title\": \"quarto\",\r\n        \"url\": \"www.image.com/quarto\"\r\n    }],\r\n    \"categoryId\": 1,\r\n    \"cityId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProdutoPorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/{{productId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"{{productId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarProdutoImagensPorId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/{{productId}}/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"{{productId}}",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosProdutos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if response is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosProdutosPorCidade",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if response is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/city/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"city",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTodosProdutosPorCategoria",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check if response is array\r",
+									"pm.test(\"Validate if response is an array\", function (){\r",
+									"    pm.expect(pm.response.json().content).to.be.an(\"array\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/category/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarProduto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 200\", function() {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"// Test Case: Check json format\r",
+									"pm.test(\"Validate if response is in json format\", function (){\r",
+									"    pm.response.to.be.json;\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate if respose matches request\", function (){\r",
+									"    pm.expect(response.id).to.eql(pm.collectionVariables.get(\"productId\"));\r",
+									"    pm.expect(response.name).to.eql(\"Flat Fortaleza\");\r",
+									"    pm.expect(response.description).to.eql(\"Flat perto da praia\");\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{productId}},\r\n    \"name\": \"Flat Fortaleza\",\r\n    \"description\": \"Flat perto da praia\",\r\n    \"characteristicIds\": [1],\r\n    \"imageList\": [{\r\n        \"id\":{{imageId1}},\r\n        \"title\": \"quarto 01\",\r\n        \"url\": \"www.image.com/quarto\"\r\n    },\r\n    {\r\n        \"id\":{{imageId2}},\r\n        \"title\": \"quarto 02\",\r\n        \"url\": \"www.image.com/quarto\"\r\n    }],\r\n    \"categoryId\": 1,\r\n    \"cityId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarProduto",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Test Case: Check the Response status\r",
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/product/{{productId}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"{{productId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "categoryId",
+			"value": ""
+		},
+		{
+			"key": "productId",
+			"value": ""
+		},
+		{
+			"key": "cityId",
+			"value": ""
+		},
+		{
+			"key": "characteristicId",
+			"value": ""
+		},
+		{
+			"key": "imageId1",
+			"value": ""
+		},
+		{
+			"key": "imageId2",
+			"value": ""
+		}
+	]
+}

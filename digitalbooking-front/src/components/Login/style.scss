@@ -1,0 +1,65 @@
+@import '../../App.scss';
+
+#login1{
+    background-color:rgb(223, 228, 234, 0.8);
+    height: calc(100vh - 147px);
+        
+  .formLogin.col-lg-4.col-md-10.col-10{
+    margin: 0% auto 0;
+    }
+
+    .h3Login{
+    padding:10%;
+    text-align: center;
+    font-weight:bold;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: $laranja;  
+    }
+
+    label.form-label{
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: $preto;
+    }
+
+    #formBasicPassword.form-control, 
+    #formBasicEmail.form-control{
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+        border:none;
+        
+    }
+
+    .d-flex.login{
+        justify-content:center;
+        padding-top:10%;
+    }
+
+    button.mb-3.col-lg-4.col-md-4.col-12.btn.btn-primary.login{
+        background-color: $laranja!important;
+        border:none;
+        font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+    }
+    
+    .pLogin{
+        text-align:center;
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    }
+
+    .pLogin a {
+        font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+        text-decoration: none;
+        color: $preto;
+        font-weight: bold;
+    }
+
+    .imageVisibilityStart.login{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        right: 1.9rem;
+        z-index: 2;
+        float: right;
+        bottom: 2.5rem;
+    }  
+
+
+}

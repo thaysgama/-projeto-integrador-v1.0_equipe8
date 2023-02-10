@@ -1,0 +1,306 @@
+@import '../../App.scss';
+
+
+.reservationDetail.container {
+    background-color: #EEEEF1;
+    margin:0!important;
+    padding:3% 0 0 0!important;
+    min-width:100%!important;
+    height:100%!important;
+}
+
+.coluna1{
+    height:100%;
+    width:100%;
+    margin-bottom:4%!important;
+}
+
+.reservation-informations.row {
+    padding:0 3% 3% 3%;
+    margin:0!important;
+    width:100%;
+}
+
+.h3Dados{
+    padding:0 3.8%;
+}
+
+h3.h3ReservationForm{
+    margin-top:4%!important;
+    padding:0!important;
+}
+
+form.formReservation{
+    margin:0!important;
+
+    div.reservationForm.row {
+        border: 1px solid #DFE4EA;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        margin:0;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+label.form-label {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: $preto;
+}
+
+input#validationFormik10.form-control,
+#validationFormik11.form-control,
+#validationFormik12.form-control,
+#validationFormik13.cityReservation.form-control {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border: none !important;
+    outline: 0;
+    background-color: #DFE4EA !important;
+}
+
+input#validationFormik10.form-control.is-invalid,
+#validationFormik11.form-control.is-invalid,
+#validationFormik12.form-control.is-invalid,
+#validationFormik13.cityReservation.form-control.is-invalid {
+    margin-bottom: 0 !important;
+}
+
+div.reservationFormError.invalid-feedback {
+    position: relative;
+    width: 80%;
+    margin-bottom: 2%;
+}
+                
+// #calendar-reservation {
+//     display: flex;
+//     width: 100%;
+//     flex-flow: row wrap;
+//     align-items: center;
+// }
+
+#one {
+    display: none;
+}
+
+// #reservation-container {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top:3%;
+// }
+
+#calendar-area {
+    display: flex;
+    margin:0!important;
+}
+
+.rc_dual {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+}
+
+// #reservation-area {
+//     background-color: $branco;
+//     margin-left: 2rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-flow: column wrap;
+//     padding: 2rem;
+//     border-radius: 8px;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//     width: 422px;
+
+//     input {
+//         background-color: $laranja;
+//     }
+// }
+
+// #reservation-time {
+//     color: $cinza-escuro;
+//     margin:0!important;
+//     width: 100%;
+// }
+
+// div.calendar-container{
+//     width:100%!important;
+//     margin:0!important;
+// }
+
+div.react-calendar{
+    //width:100%!important;
+    margin:0!important;
+    border-radius:8px;
+    //height:100%;
+}
+
+.time-informations {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+label.labelChegada{
+    padding-bottom:0.5rem;
+}
+                
+select.form-select {
+    width: 50%;
+    color: $cinza-escuro!important;
+    border:none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+select.form-select:focus{
+    border:none!important;
+}
+
+select.form-select:hover{
+    background-color:none!important;
+}
+            
+// #reservation-container {
+// max-width: 400px;
+// background-color: white;
+// border-radius: 8px;
+// color: $cinza-escuro;
+// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+// }
+
+.photoReservation{
+   // margin-top:15%!important;
+    margin-bottom:3%!important;
+    min-height:100%;
+}
+
+.reservationPhoto{
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin:0;
+    width: 100%;
+    background-color:white;
+
+    h3.title{
+        padding:3%;
+        margin:0;
+    }
+    
+    .photo-reservation {
+        width:100%;
+    }
+}
+
+.informations {
+    padding: 1.6rem;
+}
+
+.informations-product {
+    .category {
+        color: #BEBEBE;
+        font-weight: bold;
+    }
+
+    .classification {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+
+// .container-lg {
+//     padding: 0 !important;
+// }
+
+hr {
+    color: $cinza-claro;
+}
+
+.checkin {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    text-align:center;
+}
+
+.checkout {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+h6.checkInOut {
+    font-weight: bold;
+    margin:0!important;
+}
+
+button.buttonModalReservation.btn.btn-link {
+    width: 100%;
+    background-color: $laranja;
+    color: white;
+    border: none;
+    font-family: roboto;
+    font-weight: bold;
+    margin: 3% 0 0 0!important;
+    padding: 3% 0;
+    justify-content:center;
+}
+
+    // @media screen and (max-width: 480px) {
+
+    //     #one {
+    //         display: block;
+    //     }
+
+    //     #double {
+    //         display: none;
+    //     }
+
+    //     #calendar-reservation {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //     }
+
+    //     #reservation-area {
+    //         width: 500px;
+    //     }
+
+
+    // }
+
+    // @media screen and (min-width: 480px) and (max-width: 820px) {
+    //     #one {
+    //         display: none;
+    //     }
+
+    //     #double {
+    //         display: block;
+    //     }
+
+    //     //   #calendar-reservation{
+    //     //       display: flex;
+    //     //       justify-content: center;
+    //     //       align-items: center;
+    //     //   }
+
+
+
+    // }
+
+    // @media screen and (min-width: 768px) {
+
+
+    //     div.reservationForm.row{
+    //         width: 50vw;
+    //         background-color: red;
+    //     }
+
+    //     // #calendar-reservation {
+    //     //     justify-content: center;
+    //     //     width: 90vw;
+    //     // }
+
+    // }
+

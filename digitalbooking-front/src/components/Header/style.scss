@@ -1,0 +1,54 @@
+@import '../../App.scss';
+
+
+#header_container {
+    .container {
+    display: flex;
+    background-color: transparent!important;
+
+    .navbar{
+        box-shadow:none;
+    }
+
+
+
+@media (max-width: 575px) {
+    .header-desktop{
+        display: none;
+    }
+}
+
+.logo-desktop{
+    display: none;
+}
+
+@media (min-width: 915px){
+    .logo-mobile{
+        display: none;
+    }
+    .logo-desktop{
+        display: block;
+    }
+
+}
+
+.link-desktop{
+    display: flex;
+        a{
+        border: 1px solid $laranja;
+        margin-left: 16px;
+        border-radius:  5px;
+        color: $laranja;
+        width: 164px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-link{
+        color: $laranja !important;
+    }
+}
+    
+}
+}

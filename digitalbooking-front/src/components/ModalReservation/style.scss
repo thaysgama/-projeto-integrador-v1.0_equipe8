@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+
+button.buttonModalReservation.btn.btn-link{
+    text-decoration: none;
+    color: white;
+    background-color: $laranja;
+    border-radius: 5px;
+    margin:10%;
+}
+
+div.modal-content{
+    border:none;
+    background: #FFFFFF;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    text-align:center!important;
+
+
+    div.modalReservation.modal-body{
+        border: none;
+        width:100%;
+        text-align:center!important;
+        padding:5%;
+
+        .svgModalReservation{
+            padding-bottom:3%;
+        }
+
+        h4.modalReservation{
+            color: $laranja;
+            margin:0;
+        }
+
+        p.modalReservation{
+            font-weight:bold;
+        }
+
+        button.buttonModalReservation2.btn.btn-link{
+            width:35%;
+            text-decoration: none;
+            color: white;
+            background-color: $laranja;
+            border-radius: 5px;
+        }
+    }
+}

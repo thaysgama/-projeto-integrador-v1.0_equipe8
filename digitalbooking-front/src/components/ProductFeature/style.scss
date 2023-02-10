@@ -1,0 +1,46 @@
+@import '../../App.scss';
+
+
+#product_feature{
+    color: $cinza-escuro;
+    h2{
+        font-weight: bold;
+        color: $cinza-escuro;
+        margin: 30px;
+    }
+    hr {
+        color: $laranja;
+        height: 1.5px
+    }
+    li{
+        list-style-type: none;
+        margin-bottom: 16px;
+    }
+    ul{
+        padding: 0;
+    }
+
+    .icons-features{
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+    
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:40px;
+
+        li {
+            display: inline;
+            margin-right: 80px;
+            svg {
+                color: $laranja;
+            }
+            
+        }
+    }
+    
+    }
+}

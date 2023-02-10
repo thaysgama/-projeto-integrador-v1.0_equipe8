@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+div.Calendar{
+    height: 40px;
+}
+
+div.date-picker{
+    height: 3rem;
+}
+
+div.date-picker-input{
+    height: 2rem !important;
+}
+
+div.date-picker-date-group{
+    height: 2rem;
+}
+
+div#start-date-input-button{
+    height: 2rem;
+}
+
+div#end-date-input-button{
+    height: 2rem;
+}
+
+button.submit-button {
+    width: 206px;
+    height: 40px;
+    background: $laranja !important;
+    border: none;
+}
+
+
+div.dialog-date-picker.open{
+    top: 2.5rem;
+    left: -20rem;
+}
+
+div.day.selected.highlight.end::after{
+    background-color: $laranja !important;
+}

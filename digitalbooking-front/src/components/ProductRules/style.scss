@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+#product_rules{
+    color: $cinza-escuro;
+    background-color: white;
+    padding: 2px;
+    h2{
+        font-weight: bold;
+        color: $cinza-escuro;
+        margin: 30px;
+    }
+    h4{
+        color: $laranja;
+        font-weight: bold;
+    }
+    hr {
+        color: $laranja;
+        height: 1.5px
+    }
+    li{
+        list-style-type: none;
+        margin-bottom: 16px;
+    }
+    ul{
+        padding: 0;
+    }
+    .informations-rules{
+        display: inline-grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 44px;
+        grid-row-gap: 13px;
+        margin: 30px;
+        font-weight: 500;
+
+        @media (max-width: 570px){
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+        }
+    }
+
+}

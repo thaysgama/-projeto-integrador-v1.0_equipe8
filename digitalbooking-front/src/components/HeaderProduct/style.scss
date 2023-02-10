@@ -1,0 +1,141 @@
+@import '../../App.scss';
+
+
+
+#main-container {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    align-items: center;
+    
+}
+
+#title-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $cinza-escuro;
+    color: $white;
+    height: 60px;
+}
+
+#title-cat {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 50%;
+    padding-left: 1rem;
+    
+
+    h1 {      
+        font-size: 24px;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    p {       
+        font-size: 14px;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+}
+
+#arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2rem;
+
+    a {
+        text-decoration: none;
+        color: $branco;
+    }
+
+    i {
+        font-size: 30px;
+    }
+
+}
+
+
+#adress-rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $cinza-claro;
+    color: $cinza-escuro;
+    height: 60px;
+}
+
+#adress {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 50%;
+    
+
+    #p-first {       
+        font-size: 14px;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        width: 100%;
+        margin-left: 1.2rem;
+    }
+
+    #p-second {      
+        font-size: 14px;
+        margin-bottom: 1rem;
+        width: 100%;
+        margin-left: 2.4rem;
+    }
+}
+
+#adress-location {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+
+    i {
+        position: absolute;
+        bottom: .2rem;
+        margin: 0;       
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+   #adress {
+       width: 100%;
+    #p-first {
+        font-size: 13px;
+    }
+
+    #p-second {
+        font-size: 13px;
+    }
+   }  
+
+   #title-arrow {
+       h1 {
+           font-size: 14px;
+       }
+   }
+
+  
+
+}
+
+
+
+
+
+
+

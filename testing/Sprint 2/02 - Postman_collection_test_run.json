@@ -1,0 +1,1058 @@
+{
+	"id": "8066e151-bf96-48e5-af16-8b2ffecc2eb7",
+	"name": "DigitalBookingPostman",
+	"timestamp": "2022-03-22T21:41:52.956Z",
+	"collection_id": "15368306-e7339429-39a1-435e-9487-fa2de88f165c",
+	"folder_id": 0,
+	"environment_id": "0ba510c5-210b-4b12-a4fc-87d4ee1c0699",
+	"totalPass": 65,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "34451f74-61f9-48a7-b713-8c56f6808683",
+			"name": "SalvarCategoria",
+			"url": "http://localhost:8080/api/v1/category",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "b0a9980c-b7f5-4a68-abb8-ecd3d78e0664",
+			"name": "SalvarCategoria2",
+			"url": "http://localhost:8080/api/v1/category",
+			"time": 7,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "ad4ec738-9c0d-443a-9042-2b0c9643a606",
+			"name": "BuscarCategoriaPorId",
+			"url": "http://localhost:8080/api/v1/category/4",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "51ea12f8-0356-4ecb-865c-03c192bbfe20",
+			"name": "BuscarTodasCategorias",
+			"url": "http://localhost:8080/api/v1/category",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "f1539ee3-d205-49b4-af3f-4360eb6beb4b",
+			"name": "ModificarCategoria",
+			"url": "http://localhost:8080/api/v1/category",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "493f5c11-c1fb-49c3-8b83-c6474fd0c80f",
+			"name": "DeletarCategoria",
+			"url": "http://localhost:8080/api/v1/category/4",
+			"time": 8,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "4c191a93-373a-4e77-b1cb-6becf35f5397",
+			"name": "SalvarCidade",
+			"url": "http://localhost:8080/api/v1/city",
+			"time": 6,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "03a04e49-a394-414d-8e51-59ac5752e199",
+			"name": "SalvarCidade2",
+			"url": "http://localhost:8080/api/v1/city",
+			"time": 6,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "8553b5cd-13b6-4aa8-9b2f-2f0b80b19d2a",
+			"name": "BuscarCidadePorId",
+			"url": "http://localhost:8080/api/v1/city/4",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "3a82d0d0-40a4-4b72-ae7a-883a45ffc09c",
+			"name": "BuscarTodasCidades",
+			"url": "http://localhost:8080/api/v1/city",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "1ab7ece2-36db-4e66-98da-ac70cceaa583",
+			"name": "ModificarCidade",
+			"url": "http://localhost:8080/api/v1/city",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "305a317a-a948-422b-b9cf-0dacb8d1bcee",
+			"name": "DeletarCidade",
+			"url": "http://localhost:8080/api/v1/city/4",
+			"time": 13,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "dca43f47-84a8-494d-bc24-4b437624d633",
+			"name": "SalvarCaracteristica",
+			"url": "http://localhost:8080/api/v1/characteristic",
+			"time": 6,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "21991273-0e6f-4953-8713-aae6aad46455",
+			"name": "SalvarCaracteristica2",
+			"url": "http://localhost:8080/api/v1/characteristic",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "4c068d86-1e68-4287-863f-86720e66ecfc",
+			"name": "BuscarCaracteristicaPorId",
+			"url": "http://localhost:8080/api/v1/characteristic/4",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "a97a8c8e-f160-4fc3-8a40-3a1e6053a960",
+			"name": "BuscarTodasCaracteristicas",
+			"url": "http://localhost:8080/api/v1/characteristic",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "09b6d5ef-de4a-4545-90bb-fc169b8575cf",
+			"name": "ModificarCaracteristica",
+			"url": "http://localhost:8080/api/v1/characteristic",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "5913ccd3-b627-4b7b-968b-e4706e97cd1b",
+			"name": "DeletarCaracteristica",
+			"url": "http://localhost:8080/api/v1/characteristic/4",
+			"time": 9,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "aeb83f81-2c4c-48ec-ae0e-0502b1f4d81c",
+			"name": "SalvarProduto",
+			"url": "http://localhost:8080/api/v1/product",
+			"time": 14,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "be47268c-6980-4d56-bbbf-02f8f8d5a9e8",
+			"name": "BuscarProdutoPorId",
+			"url": "http://localhost:8080/api/v1/product/2",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "719bd32a-7a12-477c-b8e0-a6edd243e627",
+			"name": "BuscarProdutoImagensPorId",
+			"url": "http://localhost:8080/api/v1/product/2/images",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "6bad69f4-a9d9-418e-81fc-f470b8cb031a",
+			"name": "BuscarTodosProdutos",
+			"url": "http://localhost:8080/api/v1/product",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "ab97853f-b8de-4208-92a5-58f4e90d57a5",
+			"name": "BuscarTodosProdutosPorCidade",
+			"url": "http://localhost:8080/api/v1/product/city/1",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "7e705968-6bdf-4baa-b5b4-949d1ed5b73c",
+			"name": "BuscarTodosProdutosPorCategoria",
+			"url": "http://localhost:8080/api/v1/product/category/1",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "136424ea-e88a-4ecb-87c2-30c7eba4042b",
+			"name": "ModificarProduto",
+			"url": "http://localhost:8080/api/v1/product/",
+			"time": 23,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "4c74140c-6d31-42c5-962f-b93a340dd22c",
+			"name": "DeletarProduto",
+			"url": "http://localhost:8080/api/v1/product/2",
+			"time": 11,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 276,
+	"collection": {
+		"requests": [
+			{
+				"id": "34451f74-61f9-48a7-b713-8c56f6808683",
+				"method": "POST"
+			},
+			{
+				"id": "b0a9980c-b7f5-4a68-abb8-ecd3d78e0664",
+				"method": "POST"
+			},
+			{
+				"id": "ad4ec738-9c0d-443a-9042-2b0c9643a606",
+				"method": "GET"
+			},
+			{
+				"id": "51ea12f8-0356-4ecb-865c-03c192bbfe20",
+				"method": "GET"
+			},
+			{
+				"id": "f1539ee3-d205-49b4-af3f-4360eb6beb4b",
+				"method": "PUT"
+			},
+			{
+				"id": "493f5c11-c1fb-49c3-8b83-c6474fd0c80f",
+				"method": "DELETE"
+			},
+			{
+				"id": "4c191a93-373a-4e77-b1cb-6becf35f5397",
+				"method": "POST"
+			},
+			{
+				"id": "03a04e49-a394-414d-8e51-59ac5752e199",
+				"method": "POST"
+			},
+			{
+				"id": "8553b5cd-13b6-4aa8-9b2f-2f0b80b19d2a",
+				"method": "GET"
+			},
+			{
+				"id": "3a82d0d0-40a4-4b72-ae7a-883a45ffc09c",
+				"method": "GET"
+			},
+			{
+				"id": "1ab7ece2-36db-4e66-98da-ac70cceaa583",
+				"method": "PUT"
+			},
+			{
+				"id": "305a317a-a948-422b-b9cf-0dacb8d1bcee",
+				"method": "DELETE"
+			},
+			{
+				"id": "dca43f47-84a8-494d-bc24-4b437624d633",
+				"method": "POST"
+			},
+			{
+				"id": "21991273-0e6f-4953-8713-aae6aad46455",
+				"method": "POST"
+			},
+			{
+				"id": "4c068d86-1e68-4287-863f-86720e66ecfc",
+				"method": "GET"
+			},
+			{
+				"id": "a97a8c8e-f160-4fc3-8a40-3a1e6053a960",
+				"method": "GET"
+			},
+			{
+				"id": "09b6d5ef-de4a-4545-90bb-fc169b8575cf",
+				"method": "PUT"
+			},
+			{
+				"id": "5913ccd3-b627-4b7b-968b-e4706e97cd1b",
+				"method": "DELETE"
+			},
+			{
+				"id": "aeb83f81-2c4c-48ec-ae0e-0502b1f4d81c",
+				"method": "POST"
+			},
+			{
+				"id": "be47268c-6980-4d56-bbbf-02f8f8d5a9e8",
+				"method": "GET"
+			},
+			{
+				"id": "719bd32a-7a12-477c-b8e0-a6edd243e627",
+				"method": "GET"
+			},
+			{
+				"id": "6bad69f4-a9d9-418e-81fc-f470b8cb031a",
+				"method": "GET"
+			},
+			{
+				"id": "ab97853f-b8de-4208-92a5-58f4e90d57a5",
+				"method": "GET"
+			},
+			{
+				"id": "7e705968-6bdf-4baa-b5b4-949d1ed5b73c",
+				"method": "GET"
+			},
+			{
+				"id": "136424ea-e88a-4ecb-87c2-30c7eba4042b",
+				"method": "PUT"
+			},
+			{
+				"id": "4c74140c-6d31-42c5-962f-b93a340dd22c",
+				"method": "DELETE"
+			}
+		]
+	}
+}

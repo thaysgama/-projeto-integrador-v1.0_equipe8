@@ -1,0 +1,81 @@
+@import '../../App.scss';
+
+span.carousel-control-prev-icon,
+span.carousel-control-next-icon{
+    border: solid 1px $laranja;
+    border-radius:50%;
+    background-color: $laranja;
+    margin:0;
+    padding:0;
+    align-items:center;
+    text-align:center;
+  }
+span.carousel-control-next-icon::after,
+span.carousel-control-prev-icon::after{
+    color: transparent;
+    margin:0;
+    padding:0;
+}
+
+button.carousel-control-next,
+button.carousel-control-prev{
+    margin-top:10%;
+    align-items:center;
+    text-align:center;
+}
+
+button.btn-close{
+    margin:0!important;
+    padding:0!important;
+    top:0!important;
+    right:0!important;
+    position:absolute;
+    width:50px;
+    height:50px;
+    z-index:3;
+    border:none;
+    color:$preto;
+    text-decoration:none;
+}
+
+.d-flex.modal-header{
+    padding:0;
+    border:none;
+}
+
+.modal.fade.modal-dialog{
+    width:100%!important;
+    border:none;
+}
+
+div.carousel-indicators{
+    margin:0;
+    width:100%;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    //justify-content:space-around;
+    bottom:60px;
+}
+
+.carousel-indicators button{
+    width:100px!important;
+}
+
+div.fade.modal.show{
+    background-color:rgb(240, 87, 45, 0.8);
+}
+
+button.buttonModal.btn.btn-link{
+    text-decoration: none;
+    color: black;
+    z-index:10;
+    position: absolute;
+    //margin-top: 24%;
+    //margin-left: 32%;
+    
+    
+}
+
+.d-block w-100 img-fluid{
+    object-fit:cover;
+}

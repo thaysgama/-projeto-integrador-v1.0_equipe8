@@ -1,0 +1,191 @@
+@import '../../App.scss';
+
+#search_container {
+ 
+    flex-flow: row wrap; 
+    background-color: $cinza-escuro;
+      
+    
+
+    h1 {
+        color: $branco;              
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+     }
+
+     .form {
+        width: 100%;
+        margin-bottom: 2rem;
+        flex-flow: row wrap;
+     }
+   
+
+     .field {
+         width: 26.375rem;
+         height: 2.5rem;       
+     }
+
+     #input-calendar {
+        width: 26.375rem;
+        height: 2.5rem;
+        font-family: 'Roboto', sans-serif, FontAwesome;       
+    }
+
+
+    #input-calendar::placeholder{
+        padding-left: 0.5rem;
+    }
+
+
+     .field::placeholder {        
+        font-family: 'Roboto', sans-serif, FontAwesome;   
+    
+    
+        
+    }
+
+     .button {
+         width: 12.875rem;
+         height: 2.5rem;
+         margin-left: 0.5rem;
+         background-color: $laranja;
+         border: none;
+     }
+
+     .calendar {
+         position: absolute;
+         z-index: 1001;
+        
+     }
+}
+
+
+
+
+//Campos de sugestões
+
+#suggestionsBox{
+    position:absolute;
+    z-index: 1000;
+}
+
+.suggestion{
+    cursor: pointer;
+    border-right: 1px solid $cinza-claro;
+    border-left: 1px solid $cinza-claro;
+    border-bottom: 1px solid $cinza-claro;
+    // border-radius: 5px;
+    width: 422px;
+    height: 41px;   
+    padding-left: 40px;
+    font-size: 14px;  
+    color: $cinza-escuro;
+    display: flex;
+    align-items: center;
+    background-color: $branco;
+}
+
+.suggestion:hover{
+    background-color: $laranja;    
+}
+
+.suggestion:last-of-type{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.suggestion:first-of-type{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+
+
+
+
+//Estilizando datePicker/Calendário:
+
+.rmdp-today span.sd  {
+    background-color: $laranja !important;
+}
+
+.rmdp-range {
+    background-color: $laranja-claro !important;
+
+}
+
+span.sd:hover {
+    background-color: $laranja-claro !important;
+}
+
+.rmdp-week-day {
+    color: $laranja !important;
+}
+
+.rmdp-toolbar div {
+    background-color: $laranja !important;
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+#input-calendar, .button {
+    width: 20rem !important;
+    margin: 0 !important;
+    margin-bottom:.5rem !important;
+   
+}
+
+.field {
+    width: 20rem !important;
+    margin-left: .5rem !important;
+    margin-bottom:.5rem !important;
+}
+
+.suggestion{
+    width: 20rem !important;
+    margin-left: .5rem !important;
+    padding: 0 !important;
+}
+
+
+}
+
+@media screen and (min-width: 480px) and (max-width: 920px) {
+
+    #input-calendar, .field {
+        width: 18rem !important;
+   
+    }
+
+    .button {
+        width: 36.6rem !important;
+        margin-left: 0 !important;
+        margin-top: .5rem !important;      
+
+}
+
+}
+
+
+
+@media screen and (min-width: 920px) and (max-width: 1024px) {
+
+    #input-calendar, .field, .button {
+        width: 20rem !important;
+   
+    }
+
+    .suggestion{
+        width: 20rem !important;        
+       
+    }
+
+
+
+}
+

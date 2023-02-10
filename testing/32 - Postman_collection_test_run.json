@@ -1,0 +1,264 @@
+{
+	"id": "3d32cad2-33ea-4124-a790-ebc88c65fdf9",
+	"name": "CategoriasPostman",
+	"timestamp": "2022-03-07T22:38:00.466Z",
+	"collection_id": "15368306-e7339429-39a1-435e-9487-fa2de88f165c",
+	"folder_id": 0,
+	"environment_id": "0ba510c5-210b-4b12-a4fc-87d4ee1c0699",
+	"totalPass": 36,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "34451f74-61f9-48a7-b713-8c56f6808683",
+			"name": "SalvarCategoria",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				351,
+				7,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				},
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				},
+				{
+					"Status code is 201": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "ad4ec738-9c0d-443a-9042-2b0c9643a606",
+			"name": "BuscarCategoriaPorId",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				27,
+				6,
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true
+				}
+			]
+		},
+		{
+			"id": "51ea12f8-0356-4ecb-865c-03c192bbfe20",
+			"name": "BuscarTodasCategorias",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if response is an array": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if response is an array": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				131,
+				6,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if response is an array": true
+				}
+			]
+		},
+		{
+			"id": "f1539ee3-d205-49b4-af3f-4360eb6beb4b",
+			"name": "ModificarCategoria",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate if response is in json format": true,
+				"Validate if respose matches request": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if response is in json format": {
+					"pass": 3,
+					"fail": 0
+				},
+				"Validate if respose matches request": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				28,
+				8,
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				},
+				{
+					"Status code is 200": true,
+					"Validate if response is in json format": true,
+					"Validate if respose matches request": true
+				}
+			]
+		},
+		{
+			"id": "493f5c11-c1fb-49c3-8b83-c6474fd0c80f",
+			"name": "DeletarCategoria",
+			"time": 5,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 3,
+					"fail": 0
+				}
+			},
+			"times": [
+				16,
+				7,
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				},
+				{
+					"Status code is 204": true
+				}
+			]
+		}
+	],
+	"count": 3,
+	"totalTime": 616,
+	"collection": {
+		"requests": [
+			{
+				"id": "34451f74-61f9-48a7-b713-8c56f6808683",
+				"method": "POST"
+			},
+			{
+				"id": "ad4ec738-9c0d-443a-9042-2b0c9643a606",
+				"method": "GET"
+			},
+			{
+				"id": "51ea12f8-0356-4ecb-865c-03c192bbfe20",
+				"method": "GET"
+			},
+			{
+				"id": "f1539ee3-d205-49b4-af3f-4360eb6beb4b",
+				"method": "PUT"
+			},
+			{
+				"id": "493f5c11-c1fb-49c3-8b83-c6474fd0c80f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
